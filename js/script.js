@@ -33,13 +33,46 @@ document.getElementById('place').onclick = function() {
 			nom.innerHTML += listeglobal[a][1];
 			var dossard = insertline.insertCell(2);
 			dossard.innerHTML += listeglobal[a][2];
-			trier = true;
 		}
+		trier = true;
 	}
 	else {
 		document.location.href = '#tri_place_ordre_croissant';
 		document.getElementById('liste').innerHTML = '';
 		AfficherClassement();
+		trier = false;
+	}
+}
+
+document.getElementById('nom').onclick = function() {
+	if (trier == false) {
+		document.location.href = '#tri_nom';
+		document.getElementById('liste').innerHTML = '';
+		for (a=0; a<=listeglobal.length-1; a++) {
+			listeglobal.sort(function(a,b){return a[1].localeCompare(b[1])});
+			var insertline = document.getElementById('liste').insertRow(-1);
+			var place = insertline.insertCell(0);
+			place.innerHTML += listeglobal[a][0];
+			var nom = insertline.insertCell(1);
+			nom.innerHTML += listeglobal[a][1];
+			var dossard = insertline.insertCell(2);
+			dossard.innerHTML += listeglobal[a][2];
+		}
+		trier = true;
+	}
+	else {
+		document.location.href = '#tri_nom_inverse';
+		document.getElementById('liste').innerHTML = '';
+		for (a=0; a<=listeglobal.length-1; a++) {
+			listeglobal.sort(function(a,b){return b[1].localeCompare(a[1])});
+			var insertline = document.getElementById('liste').insertRow(-1);
+			var place = insertline.insertCell(0);
+			place.innerHTML += listeglobal[a][0];
+			var nom = insertline.insertCell(1);
+			nom.innerHTML += listeglobal[a][1];
+			var dossard = insertline.insertCell(2);
+			dossard.innerHTML += listeglobal[a][2];
+		}
 		trier = false;
 	}
 }
