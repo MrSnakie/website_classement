@@ -15,6 +15,7 @@ header {
 	border-bottom: 4px solid #80B3C6;
 	padding: 10px 20px 10px 20px;
 	margin-bottom: 20px;
+	color: #840000;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -81,6 +82,7 @@ main #classement table th {
 	padding: 20px 10px;
 	font-weight: bold;
 	text-align: left;
+	cursor: pointer;
 }
 
 main #classement table th i {
