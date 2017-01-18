@@ -1,2 +1,3 @@
-# website_classement
-Creating individual race classement w/ javascript
+Classement site
+###############
+Démo: https://mrsnakie.github.io/website_classement/
