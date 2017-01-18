@@ -8,11 +8,10 @@
 	<meta name="description" content="...">
 	<meta name="keywords" content="...">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/script.js"></script>
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 
-	<body>
+<body>
 
 	<header>
 		<img src="images/logo.png" alt="Logo" />
@@ -23,39 +22,37 @@
 	<main>
 
 		<div id="filtre">
-			<div class="title">
+			<div class="titre">
 				<h2><strong>Filtres:</strong></h2>
 			</div>
 			<p>Nom: <input type="text" name="Nom"></p>
 			<p>Prénom: <input type="text" name="Prenom"></p>
 			<p>Numéro d'arrivé: <input type="number" name="NumArrive"></p>
 			<p>Numéro de dossard: <input type="number" name="NumDossard"></p>
-			<p>Ordre alphabétique (nom)</p>
-			<p>Ordre alphabétique (prénom)</p>
 		</div>
 
 		<div id="classement">
-			<div class="title">
+			<div class="titre">
 				<h2><strong>Classement:</strong></h2>
 			</div>
 			<table>
 				<thead>
 					<tr>
-						<th>Place <i class="fa fa-sort" aria-hidden="true"></i></th>
-						<th>Nom/prénom <i class="fa fa-sort" aria-hidden="true"></i></th>
-						<th>Dossard <i class="fa fa-sort" aria-hidden="true"></i></th>
+						<th id="place">Place <i class="fa fa-sort" aria-hidden="true"></i></th>
+						<th id="nom">Nom/prénom <i class="fa fa-sort" aria-hidden="true"></i></th>
+						<th id="dossard">Dossard <i class="fa fa-sort" aria-hidden="true"></i></th>
 					</tr>
 				</thead>
 				<tbody id="liste">
-					<script type="text/javascript">
-						AfficherClassement();
-					</script>
+					<!--Ici s'execute le code javascript pour afficher le classement-->
 				</tbody>
 			</table>
 		</div>
 
 	</main>
 
-	</body>
+	<script type="text/javascript" src="js/script.js"></script>
+
+</body>
 
 </html>
