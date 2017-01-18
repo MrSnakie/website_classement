@@ -47,6 +47,13 @@ main {
 	width: 90%;
 }
 
+main .title {
+	background-color: rgba(0, 0, 0, 0.05);
+	margin: -10px -20px 0 -20px;
+	padding: 1px 20px;
+	text-transform: uppercase;
+}
+
 main #filtre {
 	background-color: #FCF8E3;
 	border: 1px solid #E6D0A1;
