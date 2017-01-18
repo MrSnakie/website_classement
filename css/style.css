@@ -1,0 +1,70 @@
+body,html {
+	background-color: #EAEDF0;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	line-height: 18pt;
+}
+
+header {
+	background-color: #88BCCF;
+	border-bottom: 4px solid #80B3C6;
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.4);
+	padding: 10px 20px 10px 20px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header a {
+	background-color: white;
+	color: #878787;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px;
+	transition: 500ms ease;
+}
+
+header a:hover {
+	background-color: #76b72a;
+	color: white;
+	border: 1px solid #6FAC28;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: auto;
+	width: 90%;
+}
+
+main #filtre {
+	background-color: #FCF8E3;
+	border: 1px solid #E6D0A1;
+	border-radius: 5px;
+	color: #8a6d3b;
+	margin-bottom: 20px;
+	padding: 10px 20px 10px 20px;
+}
+
+main #classement {
+	background-color: white;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: 5px;
+	color: #000000;
+	padding: 10px 20px 10px 20px;
+	margin-bottom: 20px;
+}
+
+main ul #liste {
+	list-style: none;
+}
