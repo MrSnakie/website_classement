@@ -4,7 +4,11 @@ function AfficherClassement() {
 
 	var liste2 = [[70,"MOSNIER Bernard",55],[71,"BERGERET Lise",8],[72,"BERGERET Christophe",7],[73,"LEFEBVRE Michel",91],[74,"FLEURY Stephanie",15],[75,"AUBARD Nicolas",74],[76,"VALLEE Nelly",45],[77,"BERNABEU Julien",73],[78,"DUPRé Alain",78],[79,"SALIGNAT Jean-claude",4],[80,"VOLAT Marc",21],[81,"BENIGAUD Sylviane",18],[82,"LEPAIN Laurent",22]];
 
-	for (i=0; i<=liste.length; i++) {
-		document.getElementById('liste').innerHTML += '<td>'+liste[i][2]+'</td><td>'+liste[i][1]+'</td><td>'+liste[i][0]+'</td>';
+	for (i=0; i!=liste.length; i++) {
+		document.getElementById('liste').innerHTML += '<tr><td>'+liste[i][2]+'</td><td>'+liste[i][1]+'</td><td>'+liste[i][0]+'</td></tr>';
+	}
+
+	for (y=0; y!=liste2.length; y++) {
+		document.getElementById('liste').innerHTML += '<tr><td>'+liste2[y][2]+'</td><td>'+liste2[y][1]+'</td><td>'+liste2[y][0]+'</td></tr>';
 	}
 }
