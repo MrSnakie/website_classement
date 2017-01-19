@@ -30,12 +30,10 @@ function AfficherClassement() { // Nom de la fonction
 	for (a=0; a<=listeglobal.length-1; a++) { // Boucle (pour a allant de 0 à taille de la liste au pas de 1)
 		listeglobal.sort(function(a,b){return a[0] - b[0]}); // Tri les 1ères valeurs de la liste dans l'ordre croissant
 		var insertline = document.getElementById('liste').insertRow(-1); // Insère une nouvelle ligne dans le tableau (HTML)
-		var place = insertline.insertCell(0); // Insère une nouvelle cellule dans « Place »
-		place.innerHTML += listeglobal[a][0]; // Remplace le contenu de la cellule par une 1ère valeur de la liste
-		var nom = insertline.insertCell(1); // Insère une nouvelle cellule dans « Nom/prénom »
-		nom.innerHTML += listeglobal[a][1]; // Remplace le contenu de la cellule par une 2ère valeur de la liste
-		var dossard = insertline.insertCell(2); // Insère une nouvelle cellule dans « Dossard »
-		dossard.innerHTML += listeglobal[a][2]; // Remplace le contenu de la cellule par une 3ère valeur de la liste
+		for (x=0; x<=listeglobal[a].length-1; x++) { // Va permettre de créer 3 cellules à chaque tour
+			var place = insertline.insertCell(x); // Insère une nouvelle cellule
+			place.innerHTML += listeglobal[a][x]; // Remplace le contenu de la cellule
+		}
 	}
 }
 
@@ -52,12 +50,10 @@ document.getElementById('place').onclick = function() {
 		for (a=0; a<=listeglobal.length-1; a++) {
 			listeglobal.sort(function(a,b){return b[0] - a[0]});
 			var insertline = document.getElementById('liste').insertRow(-1);
-			var place = insertline.insertCell(0);
-			place.innerHTML += listeglobal[a][0];
-			var nom = insertline.insertCell(1);
-			nom.innerHTML += listeglobal[a][1];
-			var dossard = insertline.insertCell(2);
-			dossard.innerHTML += listeglobal[a][2];
+			for (x=0; x<=listeglobal[a].length-1; x++) {
+				var place = insertline.insertCell(x);
+				place.innerHTML += listeglobal[a][x];
+			}
 		}
 		trier = true;
 	}
@@ -79,12 +75,10 @@ document.getElementById('nom').onclick = function() {
 		for (a=0; a<=listeglobal.length-1; a++) {
 			listeglobal.sort(function(a,b){return a[1].localeCompare(b[1])});
 			var insertline = document.getElementById('liste').insertRow(-1);
-			var place = insertline.insertCell(0);
-			place.innerHTML += listeglobal[a][0];
-			var nom = insertline.insertCell(1);
-			nom.innerHTML += listeglobal[a][1];
-			var dossard = insertline.insertCell(2);
-			dossard.innerHTML += listeglobal[a][2];
+			for (x=0; x<=listeglobal[a].length-1; x++) {
+				var place = insertline.insertCell(x);
+				place.innerHTML += listeglobal[a][x];
+			}
 		}
 		trier = true;
 	}
@@ -94,12 +88,10 @@ document.getElementById('nom').onclick = function() {
 		for (a=0; a<=listeglobal.length-1; a++) {
 			listeglobal.sort(function(a,b){return b[1].localeCompare(a[1])});
 			var insertline = document.getElementById('liste').insertRow(-1);
-			var place = insertline.insertCell(0);
-			place.innerHTML += listeglobal[a][0];
-			var nom = insertline.insertCell(1);
-			nom.innerHTML += listeglobal[a][1];
-			var dossard = insertline.insertCell(2);
-			dossard.innerHTML += listeglobal[a][2];
+			for (x=0; x<=listeglobal[a].length-1; x++) {
+				var place = insertline.insertCell(x);
+				place.innerHTML += listeglobal[a][x];
+			}
 		}
 		trier = false;
 	}
@@ -116,12 +108,10 @@ document.getElementById('dossard').onclick = function() {
 		for (a=0; a<=listeglobal.length-1; a++) {
 			listeglobal.sort(function(a,b){return a[2] - b[2]});
 			var insertline = document.getElementById('liste').insertRow(-1);
-			var place = insertline.insertCell(0);
-			place.innerHTML += listeglobal[a][0];
-			var nom = insertline.insertCell(1);
-			nom.innerHTML += listeglobal[a][1];
-			var dossard = insertline.insertCell(2);
-			dossard.innerHTML += listeglobal[a][2];
+			for (x=0; x<=listeglobal[a].length-1; x++) {
+				var place = insertline.insertCell(x);
+				place.innerHTML += listeglobal[a][x];
+			}
 		}
 		trier = true;
 	}
@@ -131,12 +121,10 @@ document.getElementById('dossard').onclick = function() {
 		for (a=0; a<=listeglobal.length-1; a++) {
 			listeglobal.sort(function(a,b){return b[2] - a[2]});
 			var insertline = document.getElementById('liste').insertRow(-1);
-			var place = insertline.insertCell(0);
-			place.innerHTML += listeglobal[a][0];
-			var nom = insertline.insertCell(1);
-			nom.innerHTML += listeglobal[a][1];
-			var dossard = insertline.insertCell(2);
-			dossard.innerHTML += listeglobal[a][2];
+			for (x=0; x<=listeglobal[a].length-1; x++) {
+				var place = insertline.insertCell(x);
+				place.innerHTML += listeglobal[a][x];
+			}
 		}
 		trier = false;
 	}
